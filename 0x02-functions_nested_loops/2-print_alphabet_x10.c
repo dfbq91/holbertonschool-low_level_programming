@@ -12,7 +12,7 @@ void print_alphabet_x10(void)
 	char f;
 	int d = 0;
 
-	for (d = 0; d <= 10; d++)
+	for (d = 1; d <= 10; d++)
 
 	{
 		f = 'a';
