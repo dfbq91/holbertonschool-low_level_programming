@@ -16,14 +16,19 @@ void times_table(void)
 	{
 		for (col = 0; col <= 9; col++)
 		{
+
 			if (row * col >= 10)
 			{
 				_putchar(row * col / 10 + 48);
 				_putchar(row * col % 10 + 48);
 			}
-			else
+			else if (col != 0)
 			{
 				_putchar(' ');
+				_putchar(row * col + 48);
+			}
+			else
+			{
 				_putchar(row * col + 48);
 			}
 			if (col != 9)
@@ -31,6 +36,7 @@ void times_table(void)
 				_putchar(',');
 				_putchar(' ');
 			}
+
 		}
 		_putchar('\n');
 	}
