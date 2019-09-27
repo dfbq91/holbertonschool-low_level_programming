@@ -1,20 +1,39 @@
 #include "holberton.h"
 
 /**
-* print_line - works with defined prototype variables
-* draws a straight line in the terminal
-*@n: int type variable
+* print_triangle - works with defined prototype variables
+* prints a triangle
+*@size: int type variable
 * Return: 0
 */
 
-void print_line(int n)
+void print_triangle(int size)
 {
-	int i;
+	int x;
+	int y;
+	int z;
 
-	for (i = 1; i <= n; i++)
+	if (size > 0)
 	{
-		_putchar('_');
-
+		for (x = 0; x < size; x++)
+		{
+			z = size - x;
+			for (y = 1; y <= size; y++)
+			{
+				if (y < z)
+				{
+					_putchar(32);
+				}
+				else
+				{
+					_putchar(35);
+				}
+			}
+			_putchar('\n');
+		}
 	}
-	_putchar('\n');
+	else
+	{
+		_putchar('\n');
+	}
 }
