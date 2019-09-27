@@ -11,7 +11,6 @@ int main(void)
 	int suma = 0;
 	int i;
 
-
 	for (i = 0; i < 1024; i++)
 	{
 		if (i % threemultiples == 0 && i % fivemultiples == 0)
@@ -27,6 +26,6 @@ int main(void)
 			suma = suma + i;
 		}
 	}
-	printf("%d", suma);
+	printf("%d\n", suma);
 	return (0);
 }
