@@ -1,15 +1,16 @@
 #include "holberton.h"
-#include <stdio.h>
+
 /**
  * rev_string - function that reverses a string
- *@str: char pointer type variable
+ *@s: char pointer type variable
  * Return: Always 0.
  */
 
 void rev_string(char *s)
 {
-	int contador = 0;
 	int c = 0;
+	int d;
+	char aux;
 	int len;
 
 	while (s[c] != '\0')
@@ -19,15 +20,15 @@ void rev_string(char *s)
 
 	len = c;
 
-	for (contador = 0; contador < len - 1; contador++)
-	{
-		putchar(s[contador]);
-	}
-	putchar('\n');
+	d = len - 1;
+	c = 0;
 
-	for (contador = len - 1; contador >= 0; contador--)
+	while (c <= d)
 	{
-		putchar(s[contador]);
+		aux = s[c];
+		s[c] = s[d];
+		s[d] = aux;
+		c++;
+		d--;
 	}
-	putchar('\n');
 }
