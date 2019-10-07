@@ -1,5 +1,5 @@
 #include "holberton.h"
-#include <stdio.h>
+
 /**
 * _strchr - works with defined prototype variables
 * Description: locates a character in a string
@@ -10,12 +10,14 @@
 
 char *_strchr(char *s, char c)
 {
-	int i;
+	unsigned int i;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
 		if (s[i] == c)
 			return (s + i);
 	}
-	return (NULL);
+	if (s[i] == c)
+		return (s + i);
+	return (0);
 }
