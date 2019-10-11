@@ -1,11 +1,11 @@
 #include "holberton.h"
 
 /**
-* _pow_recursion - works with defined prototype variables
-* Description: value of x raised to the power of y
-*@x: int type variable
-*@y: int type variable
-* Return: return a power of a given number
+* getprime - return 1 if a value is a prime number.
+* Description: value if a given number is prime
+*@div: int type variable
+*@n: int type variable
+* Return: 1 if value is prime, 0 if no.
  */
 
 int getprime(int n, int div)
@@ -16,6 +16,13 @@ int getprime(int n, int div)
 		return (0);
 	return (getprime(n, div + 1));
 }
+
+/**
+ * is_prime_number - works with defined prototype variables
+ * Description: value if a given number is prime
+ *@n: int type variable
+ * Return: getprime.
+ */
 
 int is_prime_number(int n)
 {
