@@ -3,7 +3,7 @@
 #include "holberton.h"
 
 /**
- * free_grid -  frees a 2 dimensional grid previously created by other function.
+ * free_grid -  frees a 2 dimensional grid created by other function.
  * @grid: int pointer grid.
  * @height: int pointer type variable.
  * Return: memory cleaned.
