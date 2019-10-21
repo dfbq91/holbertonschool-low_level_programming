@@ -1,5 +1,6 @@
 #ifndef DOG_H
 #define DOG_H
+#define dog_t struct dog
 
 /**
 * struct dog - struct about dog elements
