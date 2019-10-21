@@ -2,9 +2,9 @@
 #include "dog.h"
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * print_dog - prints a struct dog.
+ * @d: pointer to a struct
+ * Return: NULL if struct is NULL
  */
 
 void print_dog(struct dog *d)
@@ -22,5 +22,5 @@ void print_dog(struct dog *d)
 	if (d->owner == NULL)
 		printf("Owner: (nil)\n");
 	else
-		printf("Owner: %s\n",d->owner);
+		printf("Owner: %s\n", d->owner);
 }
