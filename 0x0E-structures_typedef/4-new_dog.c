@@ -57,8 +57,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (name == NULL || owner == NULL)
 		return (NULL);
 
-	lename = firstlen(name);
-	lenowner = firstlen(owner);
+	lename = firstlen(name) + 1;
+	lenowner = firstlen(owner) + 1;
 
 	dogn = malloc(sizeof(dog_t));
 	if (dogn == NULL)
