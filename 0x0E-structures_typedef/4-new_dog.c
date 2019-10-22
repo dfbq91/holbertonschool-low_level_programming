@@ -54,7 +54,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	int lename, lenowner;
 	dog_t *dogn;
 
-	if (name == NULL && owner == NULL)
+	if (name == NULL || owner == NULL)
 		return (NULL);
 
 	lename = firstlen(name);
