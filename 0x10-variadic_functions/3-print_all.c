@@ -26,25 +26,22 @@ void print_all(const char * const format, ...)
 			printf("%f", va_arg(list, double));
 			break;
 		case 's':
-			if (va_arg(list, int) == '\0')
-				printf("(nil)");
 			printf("%s", va_arg(list, char*));
-			break;
 		}
 		i++;
 		switch (*(format + i))
 		{
-		case '\0':
-			printf("\n");
-			break;
 		default:
-			if ((*(format + i) == 'c') || (*(format + i) == 'f' ||
-						       (*(format + i) == 'i')) || (*(format + i) == 's'))
+			if (((*(format + i) == 'c') || (*(format + i) == 'f') ||
+			     (*(format + i) == 'i') || (*(format + i) == 's')) &&
+			    (*(format + i) != '\0'))
 			{
 				printf(", ");
 				break;
 			}
 		}
+
 	}
+	printf("\n");
 	va_end(list);
 }
