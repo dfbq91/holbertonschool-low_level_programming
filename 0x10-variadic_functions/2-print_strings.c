@@ -13,7 +13,6 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	char *j;
 
 	/*Inicializa list para un n número de argumentos*/
-
 	va_start(list, n);
 
 	/*Accede a los argumentos asignados a list*/
@@ -22,10 +21,10 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		j = va_arg(list, char*);
 
 		if (j)
-		  printf("%s", j);
+			printf("%s", j);
 		else
-		  printf("(nil)");
-		
+			printf("(nil)");
+
 		if ((i + 1 != n) && (separator != NULL))
 			printf("%s", separator);
 	}
