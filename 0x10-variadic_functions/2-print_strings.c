@@ -21,20 +21,13 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	{
 		j = va_arg(list, char*);
 
-		if ((j == NULL) && (i + 1 != n))
-		{
-			printf("(nil)");
-			printf("%s", separator);
-		}
-		else if ((j == NULL))
-			printf("(nil)");
-		else if (i + 1 != n)
-		{
-			printf("%s", j);
-			printf("%s", separator);
-		}
+		if (j)
+		  printf("%s", j);
 		else
-			printf("%s", j);
+		  printf("(nil)");
+		
+		if ((i + 1 != n) && (separator != NULL))
+			printf("%s", separator);
 	}
 	/*Limpia la memoria asignada a list*/
 	va_end(list);
