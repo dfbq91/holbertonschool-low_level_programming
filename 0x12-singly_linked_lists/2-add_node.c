@@ -1,8 +1,8 @@
 #include "lists.h"
 /**
- * add_node - return number of elements in a linked list
+ * add_node - add a node at the beggining of the list
  * @head: pointer to a pointer to head
- * *str: string to put in node
+ * @str: string to put in node
  * Return: the address of the new element, or NULL if it failed
  */
 
@@ -28,7 +28,7 @@ list_t *add_node(list_t **head, const char *str)
 	new->len = len;
 	new->next = *head;
 	*head = new;
-	
+
 	return (*head);
 }
 /**
