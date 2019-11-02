@@ -1,5 +1,4 @@
 #include "lists.h"
-
 /**
  * add_node - return number of elements in a linked list
  * @head: pointer to a pointer to head
@@ -12,14 +11,24 @@ list_t *add_node(list_t **head, const char *str)
 	list_t *new;
 	unsigned int len;
 
-	len = getlenght(str);
 	new = malloc(sizeof(list_t)); /*Reservo espacio en memoria dinámica*/
+
 	if (new == NULL)
 		return (NULL);
-	new->len = len;
+
 	new->str = strdup(str);
+	if (new->str == NULL)
+	{
+		free(new->str);
+		free(new);
+		return (NULL);
+	}
+
+	len = getlenght(str);
+	new->len = len;
 	new->next = *head;
 	*head = new;
+	
 	return (*head);
 }
 /**
