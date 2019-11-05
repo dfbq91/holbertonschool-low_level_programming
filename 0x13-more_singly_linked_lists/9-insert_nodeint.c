@@ -5,20 +5,18 @@
  * @head: pointer to pointer to head
  * @n: int value to new node
  * @idx: position where new node will be added
- * Return: adress of the new node or NULL if issn't possible to add the new node
+ * Return: adress of the new node or NULL if isn't possible to add
  */
 
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
 	unsigned int count = 0;
 	listint_t *current;
-	listint_t *new;
+	listint_t *new = malloc(sizeof(listint_t));
 	listint_t *temp;
 
 	current = *head;
 	temp = *head;
-
-	new = malloc(sizeof(listint_t));
 
 	if (new == NULL)
 		return (NULL);
@@ -32,7 +30,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	}
 	else
 	{
-		while(current)
+		while (current)
 		{
 			if (count == idx - 1)
 			{
