@@ -13,11 +13,13 @@ unsigned int binary_to_uint(const char *b)
 	int len = 0;
 	unsigned int convnumber = 0;
 
+
+	if (b == NULL)
+		return (0);
+
 	while (b[len] != '\0')
 	{
 		if (b[len] != 48 && b[len] != 49)
-			return (0);
-		if (b == NULL)
 			return (0);
 		len++;
 	}
