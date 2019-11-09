@@ -1,19 +1,17 @@
 #include "holberton.h"
 
 /**
- * flip_bits - returns number of bits fliped from one to another number.
- * @n: first binary number.
- * @m: second binary number.
- * Return: number of bits fliped
+ * get_endianness - get endianess of a machine.
+ * Return: 1 for little endian of 0 for big endian
  */
-
 
 int get_endianness(void)
 {
 	unsigned int i = 1;
-	char *c = (char*) & i;
+	char *c = (char *)&i;
+
 	if (*c)
-		return (0);
-	else
 		return (1);
+	else
+		return (0);
 }
