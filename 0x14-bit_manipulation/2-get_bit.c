@@ -18,7 +18,6 @@ int get_bit(unsigned long int n, unsigned int index)
 		count++;
 	}
 	count--;
-	printf("El número analizado es: %ld y el index es %d\n", n, index);
 	operator >>= 1; /* Divido operator entre dos*/
 
 	while (operator != 0)
