@@ -23,11 +23,11 @@ void print_binary(unsigned long int n)
 		if (operator <= n)
 		{
 			n -= operator;
-			printf("%d", 1);
+			_putchar ('1');
 		}
 		else
 		{
-			printf("%d", 0);
+			_putchar('0');
 		}
 		operator >>= 1;
 	}
