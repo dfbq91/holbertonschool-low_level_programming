@@ -20,7 +20,6 @@ def island_perimeter(grid):
                 nstep += 1
                 continue
             if POS == 1:
-                print("Fila:", nline, "posición:", nstep, "valor:", LINE[nstep])
                 if LINE[nstep - 1] == 0:
                     perimeter += 1
                 if LINE[nstep + 1] == 0:
