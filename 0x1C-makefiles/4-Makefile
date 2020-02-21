@@ -1,0 +1,22 @@
+# Builds an executable with CFLAGS named
+# holberton with variables and clean the folder too
+SRC = main.c holberton.c
+OBJ = main.o holberton.o
+CC = gcc
+NAME = holberton
+RM = rm -f
+CFLAGS = -Wall -Werror -Wextra -pedantic
+all: $(OBJ)
+	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+
+main.o: main.c m.h
+holberton.o: holberton.c m.h
+
+clean:
+	$(RM) *.~ $(NAME)
+oclean:
+	$(RM) *.o
+fclean:
+	$(RM) *.~ $(NAME) *.o
+re:
+	

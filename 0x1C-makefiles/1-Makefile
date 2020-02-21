@@ -1,0 +1,5 @@
+# Builds an executable named holberton with variables
+SRC = *.c
+CC = gcc
+all:
+	$(CC) $(SRC) -o holberton
