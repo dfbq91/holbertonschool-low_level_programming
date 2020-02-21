@@ -1,12 +1,8 @@
 # Builds an executable named holberton with variables
 # and use substitution references
 SRC = main.c holberton.c
-OBJ = main.o holberton.o
+OBJ = $(SRC:.c=.o)
 CC = gcc
 NAME = holberton
 all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
-
-main.o: main.c m.h
-
-holberton.o: holberton.c m.h

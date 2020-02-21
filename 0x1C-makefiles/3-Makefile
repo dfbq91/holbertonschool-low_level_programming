@@ -1,21 +1,18 @@
 # Builds an executable named holberton with variables
 # and clean the folder
 SRC = main.c holberton.c
-OBJ = main.o holberton.o
+OBJ = $(SRC:.c=.o)
 CC = gcc
 NAME = holberton
 RM = rm -f
 all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
-main.o: main.c m.h
-holberton.o: holberton.c m.h
-
 clean:
 	$(RM) *.~ $(NAME)
 oclean:
 	$(RM) *.o
 fclean:
-	$(RM) *.~ $(NAME) *.o
+	clean oclean
 re:
-	
+	fclean all
