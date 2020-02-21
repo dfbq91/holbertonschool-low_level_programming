@@ -21,8 +21,8 @@ def island_perimeter(grid):
                 nstep += 1
                 continue
             if POS == 1:
-                if (LINE[nstep - 1] == 1 or LINE[nstep + 1] == 1 or
-                        grid[nline - 1][nstep] == 1 or grid[nline + 1] == 1):
+                # if (LINE[nstep - 1] == 1 or LINE[nstep + 1] == 1 or
+                        # grid[nline - 1][nstep] == 1 or grid[nline + 1] == 1):
                     if LINE[nstep - 1] == 0:
                         perimeter += 1
                     if LINE[nstep + 1] == 0:
@@ -31,7 +31,7 @@ def island_perimeter(grid):
                         perimeter += 1
                     if nline + 1 != len(grid) and grid[nline + 1][nstep] == 0:
                         perimeter += 1
-                nstep += 1
+                    nstep += 1
         nline += 1
 
     return perimeter
