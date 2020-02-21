@@ -11,6 +11,8 @@ def island_perimeter(grid):
     LINE: current list of grid(another list)
     POS: current position in LIST
     '''
+    if len(grid) == 0:
+        return 0
 
     nline = 0
     perimeter = 0
@@ -21,17 +23,15 @@ def island_perimeter(grid):
                 nstep += 1
                 continue
             if POS == 1:
-                # if (LINE[nstep - 1] == 1 or LINE[nstep + 1] == 1 or
-                        # grid[nline - 1][nstep] == 1 or grid[nline + 1] == 1):
-                    if LINE[nstep - 1] == 0:
-                        perimeter += 1
-                    if LINE[nstep + 1] == 0:
-                        perimeter += 1
-                    if grid[nline - 1][nstep] == 0:
-                        perimeter += 1
-                    if nline + 1 != len(grid) and grid[nline + 1][nstep] == 0:
-                        perimeter += 1
-                    nstep += 1
+                if nstep != 0 and LINE[nstep - 1] == 0:  # left
+                    perimeter += 1
+                if nstep + 1 != len(LINE) and LINE[nstep + 1] == 0:  # right
+                    perimeter += 1
+                if nline != 0 and grid[nline - 1][nstep] == 0:  # up
+                    perimeter += 1
+                if nline + 1 != len(grid) and grid[nline + 1][nstep] == 0:
+                    perimeter += 1  # down
+                nstep += 1
         nline += 1
 
     return perimeter
