@@ -23,13 +23,13 @@ def island_perimeter(grid):
                 nstep += 1
                 continue
             if POS == 1:
-                if nstep != 0 and LINE[nstep - 1] == 0:  # left
+                if nstep == 0 or LINE[nstep - 1] == 0:  # left
                     perimeter += 1
-                if nstep + 1 != len(LINE) and LINE[nstep + 1] == 0:  # right
+                if nstep + 1 == len(LINE) or LINE[nstep + 1] == 0:  # right
                     perimeter += 1
-                if nline != 0 and grid[nline - 1][nstep] == 0:  # up
+                if nline == 0 or grid[nline - 1][nstep] == 0:  # up
                     perimeter += 1
-                if nline + 1 != len(grid) and grid[nline + 1][nstep] == 0:
+                if nline + 1 == len(grid) or grid[nline + 1][nstep] == 0:
                     perimeter += 1  # down
                 nstep += 1
         nline += 1
