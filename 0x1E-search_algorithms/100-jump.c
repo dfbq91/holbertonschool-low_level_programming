@@ -13,10 +13,10 @@ int jump_search(int *array, size_t size, int value)
 	unsigned int low = 0;
 	unsigned int high = 0;
 
-	if (array == NULL)
+	if (array == NULL || size == 0)
 		return (-1);
 
-	while (array[high] <= value && high < size)
+	while (array[high] < value && high < size)
 	{
 		if (array[high] == value)
 			break;
